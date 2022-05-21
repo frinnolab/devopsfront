@@ -5,20 +5,15 @@ import { useState } from "react";
 function UpdateForm(props) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
 
   const handleSubmit = (e) => {
-    console.log(e);
     e.preventDefault();
+    console.log(e.target.value);
   };
 
   return (
-      
-    <form
-      className="form-update"
-      onSubmit={(e) => {
-        handleSubmit(e);
-      }}
-    >
+    <form className="form-update">
       <label>Firstname</label>
       <br />
       <input
@@ -38,7 +33,23 @@ function UpdateForm(props) {
         onChange={(e) => setLastName(e.target.value)}
       />
       <br />
-      <input className="submitButton" type="submit" value="Update" />
+
+      <label>Phonenumber</label>
+      <br />
+      <input
+        id="phone"
+        name="phone"
+        value={phone}
+        type="text"
+        onChange={(e) => setPhone(e.target.value)}
+      />
+      <br />
+      <input
+        className="submitButton"
+        type="submit"
+        value="Update"
+        onSubmit={handleSubmit}
+      />
     </form>
   );
 }
