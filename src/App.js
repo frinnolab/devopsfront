@@ -1,20 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-import { Create } from './features/create';
+import logo from "./logo.svg";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Create } from "./features/create";
 
 function App() {
   return (
     <>
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Create />} />
-    </Routes>
-  </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Create />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
