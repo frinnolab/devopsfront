@@ -5,14 +5,14 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { Create } from './features/create';
 
 function App() {
   return (
     <>
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
-       
+      <Route path="/" element={<Create />} />
     </Routes>
   </BrowserRouter>
     </>
@@ -20,7 +20,3 @@ function App() {
 }
 
 export default App;
-
-function Home() {
-  return <p>home</p>
-}
